@@ -1,6 +1,6 @@
 #0、raceur编译器
 	Google公司的Traceur（http://github.com/google/traceur-compiler）编译器，可以将ES6代码编译为ES5代码。
-	**使用方法**
+	<font color="green">使用方法</font>
 	###直接插入网页
 	首先，必须在网页头部加载Traceur库文件
 	<script src = "http://google.github.io/traceur-compiler/bin/traceur.js" type="text/javascript"></script>
