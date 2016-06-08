@@ -76,3 +76,31 @@
 	与forEach()不同的是，它可以正确响应break、continue和return语句 ；
 	for-of循环也可以遍历其它的集合，for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象；
 	for-of循环也支持字符串遍历，它将字符串视为一系列的Unicode字符来进行遍历。
+#5、字符串的扩展
+	1)、ES6提供了3中新方法来确定一个字符串是否包含在另一个字符串中：
+		（1）contains():返回布尔值，表示是否找到了参数字符串
+		（2）startsWith():返回布尔值，表示参数字符串是否在源字符串的头部
+		（3）endsWith():返回布尔值，表示参数字符串是否在源字符串的尾部
+		例如：
+		var s = "Hello world!";
+		s.startsWith("Hell");//true
+		s.endsWith("!");//true
+		s.contains("o");//true
+
+		以上三个函数都支持第二个参数，表示开始搜索的位置
+		s.startsWith("o",4);//true
+		s.endsWith("e",2);//true
+	2）repeat()
+		返回一个新的字符串，表示将原字符串重复n次
+		"x".repeat(3);//"xxx"
+	3) 模板字符串
+		模板字符串是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+		//普通字符串
+		`Hello World`;
+		//多行字符串
+		`Hello
+		World!`
+		//字符串中嵌入变量
+		var name = 'Bob',time = "today";
+		`Hello ${name},how are you ${time}?`;
+		在模板字符串中嵌入变量，需要将变量名写在${}中。
