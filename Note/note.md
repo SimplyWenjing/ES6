@@ -87,11 +87,11 @@
 	for (var value of myArray) {
 	    console.log(value);
 	}
-	这是最简洁、最直接的遍历数组元素的语法； 
-	这个方法避开了for-in循环的所有缺陷 ；
-	与forEach()不同的是，它可以正确响应break、continue和return语句 ；
-	for-of循环也可以遍历其它的集合，for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象；
-	for-of循环也支持字符串遍历，它将字符串视为一系列的Unicode字符来进行遍历。
+		1）这是最简洁、最直接的遍历数组元素的语法； 
+		2）这个方法避开了for-in循环的所有缺陷 ；
+		3）与forEach()不同的是，它可以正确响应break、continue和return语句 ；
+		4）for-of循环也可以遍历其它的集合，for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象；
+		5）for-of循环也支持字符串遍历，它将字符串视为一系列的Unicode字符来进行遍历。
 #5、字符串的扩展
 	1)、ES6提供了3中新方法来确定一个字符串是否包含在另一个字符串中：
 		（1）contains():返回布尔值，表示是否找到了参数字符串
