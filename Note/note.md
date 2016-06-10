@@ -120,12 +120,32 @@
 		var name = 'Bob',time = "today";
 		`Hello ${name},how are you ${time}?`;
 		在模板字符串中嵌入变量，需要将变量名写在${}中。
-=======
-	```
-	**优点：**
-	1. 这是最简洁、最直接的遍历数组元素的语法； 
-	2. 这个方法避开了for-in循环的所有缺陷 ；
-	3. 与forEach()不同的是，它可以正确响应break、continue和return语句 ；
-	4. for-of循环也可以遍历其它的集合，for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象；
-	5. for-of循环也支持字符串遍历，它将字符串视为一系列的Unicode字符来进行遍历。
->>>>>>> origin/master
+
+#6、数值的扩展
+	(1) Number.isFinite() 和 Number.isNaN()
+		用来检查Infinite和NaN这两个特殊值
+		这两个方法仅对数值有效，对于飞数值一律返回false。
+		Number.isFinite("25");//false
+		isFinite("25");//true
+	(2) Number.parseInt() ,Number.parseFloat()
+		ES6将全局方法parseInt()和parseFloat()移植到了Number对象上，这样做的目的是逐步减少全局方法，使语言逐步模块化。
+	(3) Math的扩展
+		Math.trunc() //用于去除一个数的小数部分，返回其整数部分
+#7、数组的扩展
+	(1) Array.of()//用于将一组值转换为数组
+		Array.of(1,2,3) //[1,2,3]
+	(2) find() //用于找出第一个符合条件的数组元素，它的参数是一个回调函数，所有数组元素依次遍历该回调函数，直到找出第一个返回值为true的元素，然后返回该元素，否则返回undefined。
+
+	[1,,5,10,15] .find(function (value,index,arr) {
+		return value > 9;
+		}) //10
+		findIndex()//返回第一个符合条件的数组元素的位置，如果所有元素都不符合，则返回-1
+	(3) fill() //使用给定值填充一个数组
+	**(4) 数组推导**
+	数组推导：允许直接通过现有数组生成新数组。
+	var a1 = [1,2,3,4];
+	var a2 = [for (i of a1) i*2];//[2,4,6,8]
+	for of 后面还可以附加if语句，用来设定循环的限制条件
+	var years = [2000,2004,2008,2012,2016];
+	[for (year of years) if (year >2007)];//[2008,2012,2016]
+	[for (year of years) if(year>2007&& year<2013)];//[2008,2012]
