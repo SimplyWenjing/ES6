@@ -149,3 +149,48 @@
 	var years = [2000,2004,2008,2012,2016];
 	[for (year of years) if (year >2007)];//[2008,2012,2016]
 	[for (year of years) if(year>2007&& year<2013)];//[2008,2012]
+#8、函数的扩展
+	（1） 为函数的参数设置默认值。
+		function Point (x=0,y=0) {
+			this.x = x;
+			this.y = y;
+		}
+		任何带有默认值的参数，都被是为可选参数，不带默认值的参数，则被视为必需参数
+	（2）rest参数
+	ES6引入了rest参数（...变量名），用于获取函数的多于参数，rest参数后面不能再有其他参数，否则会报错。
+	function add(...values){
+		let sum = 0;
+		for(var value of values) {
+			sum +=value;
+		}
+		return sum;
+	}
+	add(2,5,3);//10
+	（3）扩展运算符...
+	扩展运算符好比rest参数的逆运算，将一个数组转换为用逗号分隔的参数序列。
+	var a=[1];
+	var b=[2,3];
+	var c=[4,5,6];
+	var d=[0,...a,...b,...c];
+	console.log(d);//[0,1,2,3,4,5,6];
+	（4）箭头函数=>
+	var f = v => v;
+	等同于：
+	var f = function (v) {
+		return v;
+	};
+	var f = () => 5;
+	等同于：var f = function (){
+		return 5;
+	}
+	简化函数：
+	[1,2,3].map(function(x){
+		return x*x;
+		});
+	//箭头函数写法
+	[1,2,3].map(x=>x*x);
+	注意：
+	函数体内的this对象，绑定定义时所在的对象，而不是使用时所在的对象；
+	不可以当作构造函数，即不可以使用new命令，否则报错；
+	不可以使用arguments对象，该对象在函数体内不存在；
+	由于this在箭头函数中被绑定，所以不能用call（），apply（），bind（）修改this指向
