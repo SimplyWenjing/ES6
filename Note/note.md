@@ -215,3 +215,19 @@
 		  	function dedupe (array) {
 				return Array.from(new Set(array));
 		  	}
+	（2） Map结构，类似于对象，也是键值对的集合，但是，“键”的范围不限定于字符串，对象也可以当作键。
+		  例如：
+		  	var m = new Map();
+		  	o = {
+		  		p:"Hello World!";
+		  	}
+		  	m.set(o,"content");
+		  	console.log(m.get(o));//content
+		  Map的属性：
+		  size:返回成员总数；
+		  Map的方法:
+		  set(key,value);get(key);has(key);delete(key);clear()
+		  Map的遍历
+		  map.keys():返回键名的遍历器
+		  map.values():返回键值的遍历器
+		  map.entries():返回所有成员的遍历器
