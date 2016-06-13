@@ -194,3 +194,24 @@
 	不可以当作构造函数，即不可以使用new命令，否则报错；
 	不可以使用arguments对象，该对象在函数体内不存在；
 	由于this在箭头函数中被绑定，所以不能用call（），apply（），bind（）修改this指向
+#8、Set 和 Map
+	（1） Set类似于数组，不过其成员值都是唯一的，没有重复的值。
+		  Set本身是一个构造函数，用来生成Set数据结构。
+		  例如： 
+		  	var s = new Set();
+		  	[2,3,4,5,5,2,2].map(x => s.add(x));
+		  	for(i of s ){
+		  		console.log(i);//2,3,4,5
+		  	}
+		  	//可以用数组对set进行初始化
+		  	var items = new Set([1,2,2,2,2,3]);
+		  	console.log(items.size);//3
+		  Set结构的方法：
+		  	add(value);delete(value);has(value);clear():清除所有成员
+		  Set结构的属性：
+		  	Set.prototype.constructor:构造函数，默认就是Set函数
+		  	Set.prototype.size:返回Set的成员总数
+		  	//去除数组中重复元素
+		  	function dedupe (array) {
+				return Array.from(new Set(array));
+		  	}
