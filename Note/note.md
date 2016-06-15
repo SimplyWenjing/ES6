@@ -252,3 +252,16 @@
 				console.log(n);
 			}
 		for...in 循环读取键名；for...of循环读取键值
+#10、Generator 
+	 Generator 就是普通函数，有两个特征：一是function关键字后面有一个星号；二是函数体内部使用yield语句定义遍历器的每个成员，即不同的内部状态 
+	    function* helloWorldGenerator () {
+			yield 'hello';
+			yield 'world';
+			return 'ending';
+		}
+		var hw = helloWorldGenerator();
+		hw.next();
+		hw.next();
+		hw.next();
+
+	Generator的本质，是提供一种可以暂停执行的函数。
