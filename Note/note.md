@@ -231,3 +231,24 @@
 		  map.keys():返回键名的遍历器
 		  map.values():返回键值的遍历器
 		  map.entries():返回所有成员的遍历器
+#9、Iterator遍历器
+		遍历器是一种协议，任何对象只要部署了这个协议，就可以完成遍历操作。它的主要作用有两个，
+	一个是为遍历对象的属性提供统一的接口，二是时对象的属性能够按次序排列。
+		ES6的遍历器协议规定，部署了next方法的对象，就具备了遍历器功能。next方法必须返回一个包含value和done两个属性的对象。value属性是当前遍历位置的值，done属性是一个布尔值，表似乎遍历是否结束。
+			function makeIterator (array) {
+				var nextIndex = 0;
+				return {
+					next: function () {
+						return nextIndex < array.length ? {value:array[nextIndex++],done:false}:{value:undefined,done:true};
+					}
+				}
+			}//定义了一个makeIterator函数，作用是返回一个遍历器对象，用来遍历参数数组。
+		ES6中，一个对象只要部署了next方法，就被视为具有Iterator接口，就可以用for...of循环遍历它的值。
+			var it = makeIterator([1,2,3,4,5]);
+			for(var n of it) {
+				if(n>it.length){
+					break;
+				}
+				console.log(n);
+			}
+		for...in 循环读取键名；for...of循环读取键值
