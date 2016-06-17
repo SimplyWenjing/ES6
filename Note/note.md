@@ -311,3 +311,14 @@
 	}, function(error){
 		//handle errors
 	})
+
+	Promise 对象有三种状态：
+
+	(1)Fulfilled 可以理解为成功的状态
+	(2)Rejected 可以理解为失败的状态
+	(3)Pending 既不是 Fulfilld 也不是 Rejected 的状态，可以理解为 Promise 对象实例创建时候的初始状态
+
+
+	Promise.all 可以接收一个元素为 Promise 对象的数组作为参数，当这个数组里面所有的 Promise 对象都变为 resolve 时，该方法才会返回。
+	Promise 迷你书：
+	http://liubin.org/promises-book/  
