@@ -265,3 +265,49 @@
 		hw.next();
 
 	Generator的本质，是提供一种可以暂停执行的函数。
+#11、Promise 
+	ES6原生提供Promise对象。所谓Promise对象，就是代表了未来某个将要发生的事件（通常是一个异步操作）。它的好处在于，有了promise对象，就可以将异步操作的流程表达出来，避免了层层嵌套的回调函数。
+
+	Promise对象的基本用法：
+	var promise = new Promise(function(resolve,reject) {
+		if(/*异步操作成功*/) {
+			resolve(value);
+		} else {
+			reject(error);
+		}
+	});
+	promise.then(function (value) {
+		//success
+	},function(value){
+		//failure
+	})
+
+	以上代码表示，Promise 构造函数接受一个函数作为参数，该函数的两个参数分别为resolve方法和reject方法。如果异步操作成功，则用resolve方法将Promise对象的状态变为成功，否则，用reject方法将状态变为失败。
+	promise实例生成以后，可以使用then方法分别制定resolve方法和reject方法的回调函数。
+	用Promise对象实现Ajax操作：
+	var getJSON = function (url) {
+		var promise = new Promise (function (resolve,reject) {
+			var client = new XMLHttpRequest();
+			client.open("GET",url);
+			client.onreadystatechange = handler;
+			client.responseType = "json";
+			client.setRequestHeader("Accept","application/json");
+			client.send();
+			function handler () {
+				if (this.readyState === this.DONE) {
+					if(this.status === 200) {
+						resolve(this.response);
+					} else {
+						reject(this);
+					}
+				}
+			}
+		});
+		return promise;
+	};
+
+	getJSON("/post.json").then(function(json){
+		//continue
+	}, function(error){
+		//handle errors
+	})
