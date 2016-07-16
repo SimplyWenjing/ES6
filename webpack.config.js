@@ -1,6 +1,6 @@
 var path = require('path');
 module.exports = {
-  entry: "./Code/main.js",
+  entry: "./Code/set&map.js",
   output: {
     path: __dirname,
     filename: "bundle.js"

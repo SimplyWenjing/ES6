@@ -47,7 +47,7 @@
 	jQuery.ajax= function (url,{
 		async = true,
 		beforeSend = function () {},
-		cache = treu,
+		cache = true,
 		complete = function () {},
 		crossDomain = false,
 		global = true.
@@ -193,6 +193,13 @@
 	函数体内的this对象，绑定定义时所在的对象，而不是使用时所在的对象；
 	不可以当作构造函数，即不可以使用new命令，否则报错；
 	不可以使用arguments对象，该对象在函数体内不存在；
+
+	新的知识：
+	1、如果箭头函数不需要参数或者需要多个参数，就是用圆括号代表参数部分
+		例如： var sum (num1,num2) => num1+num2;
+	2、如果箭头函数的代码块部分多于一条语句，就要使用大括号将其括起来，并使用return语句返回
+	3、如果箭头函数直接返回一个对象，必须在对象外面加上括号。
+	var getTempItem = id => ({id:id,name:"Temp"});
 	由于this在箭头函数中被绑定，所以不能用call（），apply（），bind（）修改this指向
 #8、Set 和 Map
 	（1） Set类似于数组，不过其成员值都是唯一的，没有重复的值。
