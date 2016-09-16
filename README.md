@@ -7,7 +7,7 @@
 ![let](https://github.com/SimplyWenjing/ES6/blob/master/Note/let.jpg)    
 
 ## const
-![const](https://github.com/SimplyWenjing/ES6/tree/master/Note/const.jpg)
+![const](https://github.com/SimplyWenjing/ES6/blob/master/Note/const.jpg)
 
 ## Array的扩展    
 ![Array](https://github.com/SimplyWenjing/ES6/blob/master/Note/Array.jpg)
