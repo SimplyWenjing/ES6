@@ -9,8 +9,8 @@
 ## const
 ![const](https://github.com/SimplyWenjing/ES6/blob/master/Note/const.jpg)
 
-## Array的扩展    
-![Array](https://github.com/SimplyWenjing/ES6/blob/master/Note/Array.jpg)
+## 数值的扩展    
+![数值的扩展](https://github.com/SimplyWenjing/ES6/blob/master/Note/Array.jpg)
 
 ## 解构赋值
 ![解构](https://github.com/SimplyWenjing/ES6/blob/master/Note/jiegou.jpg)
