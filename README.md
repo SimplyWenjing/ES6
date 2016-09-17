@@ -24,3 +24,10 @@
 ##对象的扩展
 ![object](https://github.com/SimplyWenjing/ES6/blob/master/Note/object.jpg)
 
+## Set and Map
+![Set and Map](https://github.com/SimplyWenjing/ES6/blob/master/Note/set.jpg)
+![Set and Map](https://github.com/SimplyWenjing/ES6/blob/master/Note/map.jpg)
+
+## Promise
+![Promise](https://github.com/SimplyWenjing/ES6/blob/master/Note/promise.jpg)
+
