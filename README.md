@@ -33,7 +33,7 @@
 
 
 ## Class
-![Class](Note/Class.jpg)
+![Class](Note/Class.png)
 
 
 
