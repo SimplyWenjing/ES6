@@ -31,3 +31,9 @@
 ## Promise
 ![Promise](https://github.com/SimplyWenjing/ES6/blob/master/Note/promise.jpg)
 
+
+## Class
+![Class](Note/Class.jpg)
+
+
+
