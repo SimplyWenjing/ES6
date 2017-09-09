@@ -18,7 +18,7 @@
 ## 解构赋值
 ![解构](https://github.com/SimplyWenjing/ES6/blob/master/Note/jiegou.jpg)
 
-##函数扩展
+## 函数扩展
 ![function](https://github.com/SimplyWenjing/ES6/blob/master/Note/function.jpg)
 
 ##对象的扩展
