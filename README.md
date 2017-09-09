@@ -21,7 +21,7 @@
 ## 函数扩展
 ![function](https://github.com/SimplyWenjing/ES6/blob/master/Note/function.jpg)
 
-##对象的扩展
+## 对象的扩展
 ![object](https://github.com/SimplyWenjing/ES6/blob/master/Note/object.jpg)
 
 ## Set and Map
