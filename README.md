@@ -20,10 +20,10 @@
 ## 解构赋值
 ![解构](https://github.com/SimplyWenjing/ES6/blob/master/Note/jiegou.jpg)
 
-##函数扩展
+## 函数扩展
 ![function](https://github.com/SimplyWenjing/ES6/blob/master/Note/function.jpg)
 
-##对象的扩展
+## 对象的扩展
 ![object](https://github.com/SimplyWenjing/ES6/blob/master/Note/object.jpg)
 
 ## Set and Map
@@ -32,4 +32,10 @@
 
 ## Promise
 ![Promise](https://github.com/SimplyWenjing/ES6/blob/master/Note/promise.jpg)
+
+
+## Class
+![Class](Note/Class.png)
+
+
 
